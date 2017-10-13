@@ -36,26 +36,11 @@ def nagamochiIbaraki(adj,n):
     v2 = list[len(list) - 1]
 
 '''
-#def numRange():
-
 
 def createGraph(n,edge):
     global adjList
-    #G = nx.erdos_renyi_graph(n,edge)
-    #nx.draw(G)
-
-    #while(is_connected(G) == False):
-    #    nx.draw(G)
-    #plt.show()
-
-    #adj = nx.adjacency_matrix(G)
-    #adj = nx.to_numpy_matrix(G)
-    #sum(adj[n])
     adjList = [[0 for col in range(n)] for row in range(n)]
-    #adjList = np.zeros((n,n))
-    #print(adjList[18][18])
     numRange = list(range(0,n))
-    #numRange2 = numRange
     count = 0
     for i in range(n):
         numRange = list(range(0,n))
@@ -81,28 +66,28 @@ def createGraph(n,edge):
         adjList[i][j] = adjList[j][i] = adjList[i][j] + 1
         count = count + 1
     #print(count)
-    x = 0
+    '''x = 0
     for i in range(n):
         for j in range(n):
             print(adjList[i][j],end=" ")
             if(adjList[i][j] == 1):
                 x+=1
         print()
-    print(x)
+    print(x/2)'''
     #print(type(adjList))
     G = nx.from_numpy_matrix(np.array(adjList))
-    print(is_connected(G))
+    print(is_connected(G),count)
     if(is_connected(G) == False):
         createGraph(n,edge)
     else:
-        nx.draw(G)
+        nx.draw(G,with_labels=True)
         plt.show()
 
 
 
 
 n = 19      # nodes are set to 19
-for m in range(20, 24, 4):  # edges varies from 20 to 168 in steps of 4
+for m in range(20, 32, 4):  # edges varies from 20 to 168 in steps of 4
     createGraph(n,m)
     #nagamochiIbaraki(adj,n)
     '''for i in range(n):
