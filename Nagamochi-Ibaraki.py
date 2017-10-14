@@ -1,11 +1,12 @@
+# @author akshayrawat91
+# finds the connectivity for a pseudo-random connected graph
+
 import random as rd
 from networkx import *
-import matplotlib as mt
 import matplotlib.pyplot as plt
-#import scipy as sp
 import numpy as np
 
-
+# calculate the degree of node
 def getDegree(adjList,n):
     return sum(adjList[n])
 
