@@ -1,7 +1,6 @@
 # @author akshayrawat91
 # finds the connectivity for a pseudo-random connected graph
-# reference - GUHAN1990 "Nagamochi-Ibaraki-Algorithm-Implementation"
-# https://github.com/GUHAN1990/Nagamochi-Ibaraki-Algorithm-Implementation/blob/master/algo_implementation.py
+# reference - GUHAN1990 "Nagamochi-Ibaraki-Algorithm-Implementation" https://github.com/GUHAN1990/Nagamochi-Ibaraki-Algorithm-Implementation/blob/master/algo_implementation.py
 
 import random as rd
 from networkx import *
